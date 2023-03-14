@@ -1,9 +1,4 @@
-import { getAddress } from '@ethersproject/address';
+import { encode, decode, encodeToString, decodeString } from "./hex"
+import { isEvmAddress } from "./address"
 
-export function isAddress(value: any): string | false {
-    try {
-        return getAddress(value)
-    } catch {
-        return false
-    }
-}
+export { encode, decode, encodeToString, decodeString, isEvmAddress }
